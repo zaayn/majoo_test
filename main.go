@@ -32,7 +32,7 @@ var tmpl = template.Must(template.ParseGlob("form/*"))
 
 func Index(w http.ResponseWriter, r *http.Request) {
     db := dbConn()
-    selDB, err := db.Query("SELECT * FROM User ORDER BY id DESC")
+    selDB, err := db.Query("SELECT * FROM User ORDER BY id ASC")
     if err != nil {
         panic(err.Error())
     }
