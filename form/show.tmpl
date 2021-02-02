@@ -1,0 +1,17 @@
+{{ define "Show" }}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Golang Mysql Curd Example</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Golang Mysql Curd Example</h1>   
+    <a href="/">HOME</a> | 
+    <a href="/new">NEW</a>
+    <h2> Register {{ .Id }} </h2>
+      <p>Name: {{ .Name }}</p>
+      <p>City:  {{ .City }}</p><br /> <a href="/edit?id={{ .Id }}">Edit</a></p>
+	</body>
+</html>
+{{ end }}

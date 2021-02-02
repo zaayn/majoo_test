@@ -1,0 +1,22 @@
+{{ define "New" }}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Golang Mysql Curd Example</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Golang Mysql Curd Example</h1>   
+    <a href="/">HOME</a> | 
+    <a href="/new">NEW</a>
+    <h2>New Name and City</h2>  
+    <form method="POST" action="insert">
+      <label> Name </label><input type="text" name="name" /><br />
+      <label> Email </label><input type="text" name="email" /><br />
+      <label> Foto </label><input type="file" name="foto" /><br />
+      <label> Pass </label><input type="password" name="password" /><br />
+      <input type="submit" value="Save user" />
+    </form>
+	</body>
+</html>
+{{ end }}

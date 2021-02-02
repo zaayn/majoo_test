@@ -1,1 +1,0 @@
-# majoo_test

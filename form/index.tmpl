@@ -1,0 +1,43 @@
+{{ define "Index" }}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Majoo Test</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>CRUD Table User</h1>   
+    <a href="/">HOME</a> | 
+    <a href="/new">NEW</a>
+    <h2> Registered </h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Foto</td>
+                <td>Password</td>
+                <td>View</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+        </thead>
+        <tbody>
+        {{ range . }}
+            <tr>
+                <td>{{ .ID }}</td>
+                <td> {{ .Nama }} </td>
+                <td>{{ .Email }} </td> 
+                <td>{{ .Foto }} </td> 
+                <td>{{ .Password }} </td> 
+                <td><a href="/show?id={{ .ID }}">View</a></td>
+                <td><a href="/edit?id={{ .ID }}">Edit</a></td>
+                <td><a href="/delete?id={{ .ID }}">Delete</a><td>
+            </tr>
+        {{ end }}
+        </tbody>
+    </table>
+</body>
+</html>
+{{ end }}
