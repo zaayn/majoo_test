@@ -126,7 +126,6 @@ func Insert(w http.ResponseWriter, r *http.Request) {
 			panic(err.Error())
 		}
 		insForm.Exec(name, email, foto, password)
-		// log.Println("INSERT: Name: " + name + " | City: " + city)
 	}
 	defer db.Close()
 	http.Redirect(w, r, "/", 301)
