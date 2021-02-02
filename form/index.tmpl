@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
 </head>
 <body>
+    <center>
     <h1>CRUD Table User</h1>   
     <a href="/">HOME</a> | 
     <a href="/new">NEW</a>
@@ -13,14 +14,14 @@
     <table border="1">
         <thead>
             <tr>
-                <td>ID</td>
-                <td>Name</td>
-                <td>Email</td>
-                <td>Foto</td>
-                <td>Password</td>
-                <td>View</td>
-                <td>Edit</td>
-                <td>Delete</td>
+                <td style="width: 5px;">ID</td>
+                <td style="width: 50px;">Name</td>
+                <td style="width: 50px;">Email</td>
+                <td style="width: 50px;">Foto</td>
+                <td style="width: 40px;">Password</td>
+                <td style="width: 20px;">View</td>
+                <td style="width: 20px;">Edit</td>
+                <td style="width: 20px;">Delete</td>
             </tr>
         </thead>
         <tbody>
@@ -33,11 +34,12 @@
                 <td>{{ .Password }} </td> 
                 <td><a href="/show?id={{ .ID }}">View</a></td>
                 <td><a href="/edit?id={{ .ID }}">Edit</a></td>
-                <td><a href="/delete?id={{ .ID }}">Delete</a><td>
+                <td><a href="/delete?id={{ .ID }}">Delete</a></td>
             </tr>
         {{ end }}
         </tbody>
     </table>
+    </center>
 </body>
 </html>
 {{ end }}
